@@ -1,0 +1,118 @@
+---
+import { Image } from "astro:assets";
+import photo from "../../public/photo.avif";
+import DownloadCVButton from "./DownloadCVButton.astro";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+
+---
+
+<section>
+    <div class="photo-container">
+        <Image src={photo} alt="Foto de Daniel Molina" class="photo" loading="eager"/>
+        <DownloadCVButton />
+    </div>
+    <div class="about">
+        <h1>
+            <span>Hola, soy</span>
+            <span class="name" style='--name: "Daniel Molina";'>Daniel Molina</span>
+        </h1>
+        <p>
+            Desarrollador web Full-Stack junior 💙, mi pasión y compromiso con la creación de sitios web profesionales y de alta calidad se refleja en más de <span style="color: var(--text-cian);">2 años de experiencia.</span> Me encanta enfrentar desafíos y aprender nuevas tecnologías para ofrecer soluciones innovadoras y atractivas.
+        </p>
+        <ul>
+            <li>
+                <FaLocationDot size={"18px"} color="red" />
+                <span>Caracas - Venezuela</span>
+            </li>
+            <li>
+                <IoMdMail size={"18px"} />
+                <a href="mailto:danielparada1985@gmail.com">danielparada1985@gmail.com</a>
+            </li>
+        </ul>
+        <span class="flag">Disponible para trabajar</span>
+    </div>
+</section>
+
+<style>
+    section {
+		display: flex;
+		gap: 30px;
+		margin: 40px auto 0px auto;
+        width: 100%;
+        max-width: var(--max-page-width);
+	}
+
+    .photo-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+	.photo {
+		min-width: 200px;
+        height: auto;
+        width: 200px;
+		border-radius: 100%;
+	}
+
+	h1 {
+		display: flex;
+		flex-direction: column;
+		font-family: "Poppins-Bold";
+		color: var(--text-secondary);
+		font-size: 2rem;
+		line-height: 3rem;
+        margin-bottom: 4px;
+	}
+
+	.name {
+		font-size: 3.4rem;
+		font-family: "Poppins-ExtraBold";
+		color: var(--text-cian);
+	}
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .about p {
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        font-family: "Dm-Sans";
+        font-weight: 300
+    }
+
+    .flag {
+        display: block;
+        width: fit-content;
+        padding: 4px 14px;
+        border-radius: 30px;
+        border: 1px solid var(--text-green);
+        color: var(--text-green);
+        font-size: 1rem;
+    }
+
+    .about ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .about ul li {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--text-secondary);
+        font-size: 1rem;
+    }
+
+    .about ul li a {
+        text-decoration: none;
+        color: var(--text-secondary);
+    }
+</style>

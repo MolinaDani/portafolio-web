@@ -1,0 +1,109 @@
+---
+import {BsLinkedin, BsGithub} from "react-icons/bs"
+---
+
+<header>
+    <div class="social">
+        <a href="https://www.linkedin.com/in/daniel-parada-35b838275" target="_blank">
+            <BsLinkedin size={"18px"} />
+            <span>LinkedIn</span></a>
+        <a href="https://github.com/MolinaDani" target="_blank">
+            <BsGithub size={"18px"} />
+            <span>Github</span>
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Proyectos</a>                
+            </li>
+            <li>
+                <a href="#" class="contact-button">Contacto</a>                
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: var(--max-page-width);
+        margin: 10px auto;
+        padding: 6px 0px;
+        position: sticky;
+        top: 0;
+        left: 0
+        font-size: 1.2rem;
+        font-family: "Dm-Sans";
+        font-weight: 300;
+        color: var(--text-secondary);
+    }
+
+    ul {
+        list-style: none; 
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--text-secondary);
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .social a {
+        background-color: var(--background);
+        border: 1px solid transparent;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border-radius: 5px;
+        transition: all ease-in-out 200ms;
+        width: auto;
+        padding: 6px 14px;
+    }
+
+    .social a:hover {
+        border-color: var(--border-buttons);
+    }
+
+    nav ul li a{
+        padding: 6px 14px;
+    }
+
+    .contact-button {
+        border-radius: 5px;
+        position: relative;
+        background-color: var(--background);
+    }
+
+    .contact-button::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(45deg, #515bd4, #8134af, #dd2a7b, #f58529, #515bd4);
+        border-radius: 5px;
+        filter: blur(5px);
+        animation: move_background 4s ease-in-out infinite;
+    }
+
+    @keyframes move_background {
+        0% {
+            background-position: 0px;
+        } 50% {
+            background-position: 100px;
+        } 100% {
+            background-position: 0px;
+        }
+    }
+</style>

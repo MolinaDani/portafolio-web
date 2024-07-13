@@ -1,0 +1,111 @@
+---
+import HeaderImage from "../components/HeaderImage.astro";
+import Header from "../components/Header.astro";
+import StarsLayer from "../components/StarsLayer.astro";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Portafolio web de Daniel Molina." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<HeaderImage />
+		<Header />
+		<StarsLayer />
+		<slot />
+	</body>
+</html>
+<style is:global>
+	* {
+		margin: 0;
+  		padding: 0;
+		box-sizing: border-box;
+		border: 0;
+	}
+
+	:root {
+		--text-primary: white;
+		--text-secondary: #d3d3d3;
+		--text-cian: dodgerblue;
+		--text-green: rgb(3, 182, 3);
+		--background: #08010e;
+		--border-buttons: gray;
+		--max-page-width: 100%
+	}
+
+	@media (min-width: 768px) {
+		:root {
+			--max-page-width: 672px;
+		}
+	}
+	
+	@media (min-width: 1024px) {
+		:root {
+			--max-page-width: 896px;
+		}
+	}
+
+	@font-face {
+		font-family: "DM-Sans";
+		src: url("/fonts/DM_Sans/DMSans.woff");
+		font-weight: 100 900;
+	}
+
+	@font-face {
+		font-family: "Poppins-ExtraBold";
+		src: url("/fonts/Poppins/Poppins-ExtraBold.woff");
+		font-weight: bold;
+	}
+
+	@font-face {
+		font-family: "Poppins-Bold";
+		src: url("/fonts/Poppins/Poppins-Bold.woff");
+		font-weight: bold;
+	}
+
+	@font-face {
+		font-family: "Poppins-Black";
+		src: url("/fonts/Poppins/Poppins-Black.woff");
+	}
+
+	body {
+		min-height: 100dvh;
+		overflow-x: hidden;
+		width: 100dvw;
+		background-color: var(--background);
+		font-family: "DM-Sans";
+	}
+
+	p {
+		text-wrap: pretty;
+		color: var(--text-primary);
+	}
+
+	h1, h2, h3 {
+		text-wrap: balance;
+		color: var(--text-primary);
+	}
+
+	img, svg {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.banner {
+		width: 100%;
+		height: auto;
+	}
+
+</style>

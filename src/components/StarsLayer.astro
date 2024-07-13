@@ -1,0 +1,49 @@
+---
+---
+
+<div class="container">
+    <div class="star-1"></div>
+</div>
+
+<style>
+    .container {
+        position: absolute;
+        inset: 0;
+        z-index: -10;
+    }
+
+    .star-1 {
+        width: var(--size);
+        height: var(--size);
+        background-color: white;
+        box-shadow: var(--space-layer);
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 20%;
+        animation: move_stars 40s linear infinite;
+    }
+
+    @keyframes move_stars {
+        0% { transform: translateY(0);}
+        100% {transform: translateY(-100vh);}
+    }
+</style>
+
+<script>
+    function generateStarsLayer({size, selector, totalStars}) {
+        const layer = []
+
+        for (let i = 0; i < totalStars; i++) {
+            const x = Math.floor(Math.random() * 100)
+            const y = Math.floor(Math.random() * 100)
+            layer.push(`${x}vw ${y}vh 0 white, ${x}vw ${y+100}vh 0 white`)
+        }
+
+        const container = document.querySelector(selector)
+        container.style.setProperty("--space-layer", layer.join(","))
+        container.style.setProperty("--size", size)
+    }
+
+    generateStarsLayer({size: "2px", selector: ".star-1", totalStars: 200})
+</script>
