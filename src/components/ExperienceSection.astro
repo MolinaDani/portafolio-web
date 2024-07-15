@@ -1,0 +1,101 @@
+---
+import { FaCode } from "react-icons/fa6";
+---
+
+<section>
+    <h2>Experiencia laboral:</h2>
+
+    <div class="experiences-container">
+        <ul class="experiences-list">
+            <li>
+                <span class="icon">
+                    <FaCode size={"30px"} />
+                </span>
+                <div class="experience-data">
+                    <h3>Programador web - Freelance</h3>
+                    <span>Abril 2022 - Actualidad</span>
+                    <p>Como programador web freelance, he tenido la oportunidad de trabajar de manera independiente en diversos proyectos, brindando soluciones personalizadas a mis clientes. Mi enfoque se basa en comprender las necesidades específicas de cada proyecto y utilizar mi experiencia para desarrollar sitios web funcionales y atractivos.</p>
+                </div>
+            </li>
+            <li>
+                <span class="icon">
+                    <FaCode size={"30px"} />
+                </span>
+                <div class="experience-data">
+                    <h3>Desarrollador web Full-Stack</h3>
+                    <h4>Linabyte</h4>
+                    <span>Enero 2022 - Marzo 2024</span>
+                    <p>Durante más de dos años fui responsable del desarrollo y mantenimiento de páginas y aplicaciones web, desde su estructura y diseño en Front-End, hasta implementaciones de APIs, Bases de datos y servicios en Back-End. Utilizando mayormente un stack compuesto por Next.js, Tailwind CSS y MySQL.</p>
+                </div>
+            </li>
+        </ul>    
+    </div>
+
+</section>
+
+<style>
+    section {
+        width: var(--max-page-width);
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    h2 {
+        font-family: "Poppins-Medium";
+        font-size: 2rem;
+        letter-spacing: 1px;
+        margin-bottom: 45px;
+    }
+    
+    .experiences-container {
+        padding: 0px 20px;
+    }
+
+    .experiences-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;    
+        gap: 40px;
+    }
+
+    .experiences-list li {
+        display: flex;
+        gap: 30px;
+    }
+
+    .icon {
+        display: block;
+        min-width: 35px;
+        color: var(--icons-cian);
+    }
+
+    .experience-data {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .experience-data h3 {
+        font-family: "Poppins-Regular";
+        letter-spacing: 1px;
+        font-size: 1.4rem;
+        line-height: 10px;
+        margin-bottom: 12px;
+    }
+
+    .experience-data h4 {
+        font-family: "Poppins-Regular";
+        font-size: 1.1rem;
+        color: var(--text-cian);
+    }
+
+    .experience-data span {
+        font-size: 0.9rem;
+        color: var(--border-buttons);
+        margin-bottom: 10px;
+    }
+
+    .experience-data p {
+        font-size: 1.1rem;
+        width: 90%;
+    }
+</style>

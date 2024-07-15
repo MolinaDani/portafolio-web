@@ -3,41 +3,56 @@ import {BsLinkedin, BsGithub} from "react-icons/bs"
 ---
 
 <header>
-    <div class="social">
-        <a href="https://www.linkedin.com/in/daniel-parada-35b838275" target="_blank">
-            <BsLinkedin size={"18px"} />
-            <span>LinkedIn</span></a>
-        <a href="https://github.com/MolinaDani" target="_blank">
-            <BsGithub size={"18px"} />
-            <span>Github</span>
-        </a>
+    <div class="container">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/daniel-parada-35b838275" target="_blank">
+                <BsLinkedin size={"18px"} />
+                <span>LinkedIn</span></a>
+            <a href="https://github.com/MolinaDani" target="_blank">
+                <BsGithub size={"18px"} />
+                <span>Github</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Proyectos</a>                
+                </li>
+                <li>
+                    <a href="#" class="contact-button">Contacto</a>                
+                </li>
+            </ul>
+        </nav>
     </div>
-    <nav>
-        <ul>
-            <li>
-                <a href="#">Proyectos</a>                
-            </li>
-            <li>
-                <a href="#" class="contact-button">Contacto</a>                
-            </li>
-        </ul>
-    </nav>
 </header>
 
 <style>
+
+    .glued {
+        background-color: var(--background-transparent);
+        backdrop-filter: blur(10px);
+    }
+
     header {
+        width: 100%;
+        margin: 10px 0px;
+        padding: 8px 0px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        /* background-color: transparent; */
+        transition: all ease-in-out 500ms;
+    }
+
+
+    .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
         max-width: var(--max-page-width);
-        margin: 10px auto;
-        padding: 6px 0px;
-        position: sticky;
-        top: 0;
-        left: 0
-        font-size: 1.2rem;
-        font-family: "Dm-Sans";
+        margin: auto;
+        font-size: 1rem;
         font-weight: 300;
         color: var(--text-secondary);
     }
@@ -61,11 +76,11 @@ import {BsLinkedin, BsGithub} from "react-icons/bs"
     }
 
     .social a {
-        background-color: var(--background);
+        background-color: transparent;
         border: 1px solid transparent;
         display: flex;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
         border-radius: 5px;
         transition: all ease-in-out 200ms;
         width: auto;
@@ -107,3 +122,17 @@ import {BsLinkedin, BsGithub} from "react-icons/bs"
         }
     }
 </style>
+
+<script>
+    window.addEventListener('scroll', () => {
+        let header = document.querySelector('header');
+        let topDistance = header.offsetTop;
+        let { scrollTop } = document.documentElement;
+
+        if (scrollTop >= topDistance) {
+            header.classList.add('glued');
+        } else {
+            header.classList.remove('glued');
+        }
+    });
+</script>

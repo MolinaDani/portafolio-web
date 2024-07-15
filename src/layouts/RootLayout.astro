@@ -39,10 +39,12 @@ const { title } = Astro.props;
 		--text-primary: white;
 		--text-secondary: #d3d3d3;
 		--text-cian: dodgerblue;
-		--text-green: rgb(3, 182, 3);
+		--text-green: #10d610;
 		--background: #08010e;
+		--background-transparent: #08010ede;
 		--border-buttons: gray;
-		--max-page-width: 100%
+		--max-page-width: 100%;
+		--icons-cian: #0cd5f8;
 	}
 
 	@media (min-width: 768px) {
@@ -62,22 +64,35 @@ const { title } = Astro.props;
 		src: url("/fonts/DM_Sans/DMSans.woff");
 		font-weight: 100 900;
 	}
+	
+	@font-face {
+		font-family: "Poppins-Black";
+		src: url("/fonts/Poppins/Poppins-Black.woff");
+	}
 
 	@font-face {
 		font-family: "Poppins-ExtraBold";
 		src: url("/fonts/Poppins/Poppins-ExtraBold.woff");
-		font-weight: bold;
 	}
 
 	@font-face {
 		font-family: "Poppins-Bold";
 		src: url("/fonts/Poppins/Poppins-Bold.woff");
-		font-weight: bold;
 	}
 
 	@font-face {
-		font-family: "Poppins-Black";
-		src: url("/fonts/Poppins/Poppins-Black.woff");
+		font-family: "Poppins-SemiBold";
+		src: url("/fonts/Poppins/Poppins-SemiBold.woff");
+	}
+
+	@font-face {
+		font-family: "Poppins-Medium";
+		src: url("/fonts/Poppins/Poppins-Medium.woff");
+	}
+
+	@font-face {
+		font-family: "Poppins-Regular";
+		src: url("/fonts/Poppins/Poppins-Regular.woff");
 	}
 
 	body {
@@ -90,7 +105,7 @@ const { title } = Astro.props;
 
 	p {
 		text-wrap: pretty;
-		color: var(--text-primary);
+		color: var(--text-secondary);
 	}
 
 	h1, h2, h3 {

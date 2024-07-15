@@ -1,17 +1,28 @@
 ---
 import Layout from '../layouts/RootLayout.astro';
 import MainSection from '../components/MainSection.astro';
+import ExperienceSection from '../components/ExperienceSection.astro';
 ---
 
 <Layout title="Daniel Molina - Portafolio">
 	<main>
 		<MainSection />
+		<div class="line"></div>
+		<ExperienceSection />
 	</main>
 	<style>
 		main {
 			width: 100%;
   			margin: auto;
 			background-color: transparent;
+		}
+
+		.line {
+			width: var(--max-page-width);
+			margin: auto;
+			height: 2px;
+			margin-top: 60px;
+			background: linear-gradient(to right, transparent, var(--border-buttons), transparent);
 		}
 	</style>
 </Layout>
