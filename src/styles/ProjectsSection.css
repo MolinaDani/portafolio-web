@@ -1,0 +1,227 @@
+section#projects {
+  width: var(--max-page-width);
+  margin: auto;
+  padding-top: 60px;
+  margin-bottom: 20px;
+}
+
+section#projects h2 {
+  font-family: "Poppins-Medium";
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 45px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  place-content: center;
+  gap: 40px;
+}
+
+.projects-list {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.projects-list,
+.image-container {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all ease-in-out 300ms;
+}
+
+.image-container::after,
+.image-container::before {
+  opacity: 0;
+  top: 0;
+  transition: all ease-in-out 300ms;
+}
+
+.image-container::before {
+  transition-delay: 200ms;
+}
+
+.image-container::after {
+  transition-delay: 400ms;
+}
+
+.projects-container.intersected .projects-list,
+.projects-container.intersected .image-container {
+  transform: translateY(0);
+  opacity: 100%;
+}
+
+.projects-container.intersected .image-container::before {
+  top: -20px;
+  opacity: 100%;
+}
+
+.projects-container.intersected .image-container::after {
+  top: -40px;
+  opacity: 60%;
+}
+
+.projects-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid var(--border-buttons);
+  background-color: var(--background-projects-list);
+  border-radius: 15px;
+}
+
+.projects-list ul::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 12px;
+}
+
+.projects-list ul::-webkit-scrollbar-thumb {
+  -webkit-appearance: none;
+  background-color: var(--scrollbar-color);
+  border-radius: 15px;
+}
+
+.projects-list ul li {
+  font-size: 1rem;
+  color: var(--text-primary);
+  padding: 15px 20px;
+  cursor: pointer;
+  background-color: var(--background-projects-list);
+  transition: all ease-in-out 100ms;
+  border-bottom: 1px solid var(--border-buttons);
+}
+
+.projects-list ul li:last-child {
+  border-bottom: 0;
+}
+
+.projects-list ul li:hover {
+  background-color: var(--background-projects-list-hover);
+}
+
+.projects-list ul li.selected {
+  color: var(--text-cian);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  transition: all ease-in-out 200ms;
+}
+
+.image-container::before,
+.image-container::after {
+  content: "";
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--background-projects-list);
+  border: 1px solid var(--border-buttons);
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.image-container::before {
+  width: 90%;
+  z-index: -1;
+}
+
+.image-container::after {
+  width: 80%;
+  z-index: -2;
+}
+
+.image-container.is-change .project-image {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.project-data {
+  margin-top: 30px;
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all ease-in-out 300ms;
+}
+
+.project-data.intersected {
+  opacity: 100%;
+  transform: translateX(0);
+  transition: all ease-in-out 200ms;
+}
+
+.project-data.is-change {
+  transform: translateX(-60px);
+  opacity: 0;
+}
+
+.project-data h3 {
+  font-family: "Poppins-Regular";
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+}
+
+.project-data a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text-cian);
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.project-data a .url-icon {
+  display: none;
+}
+
+.project-data a:hover {
+  text-decoration: underline;
+}
+
+.project-data a:hover .url-icon {
+  display: inline;
+}
+
+.project-data p {
+  font-size: 1.1rem;
+  width: 80%;
+}
+
+.project-data .tecnologies {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 80%;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.project-data .tecnologies li {
+  display: block;
+  padding: 6px 12px;
+  border: 1px solid var(--border-buttons);
+  background-color: var(--background-projects-list);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
