@@ -1,0 +1,189 @@
+---
+import TitleSections from "./TitleSections.astro";
+import { BsFillSendFill } from "react-icons/bs";
+---
+
+<section id="contact">
+  <TitleSections title="¡Contáctame!" center />
+
+  <div class="form-container">
+    <form action="">
+      <div class="client-data">
+        <label for="Nombre" class="input-container">
+          <span class="title">Nombre:</span>
+          <input
+            type="text"
+            id="Nombre"
+            name="Nombre"
+            required
+            minlength="3"
+            maxlength="30"
+            autocomplete="off"
+            pattern="[a-zA-Z]*"
+          />
+        </label>
+
+        <label for="Apellido" class="input-container">
+          <span class="title">Apellido:</span>
+          <input
+            type="text"
+            id="Apellido"
+            name="Apellido"
+            required
+            minlength="3"
+            maxlength="40"
+            autocomplete="off"
+            pattern="[a-zA-Z]*"
+          />
+        </label>
+      </div>
+
+      <label for="Email" class="input-container">
+        <span class="title">Email:</span>
+        <input type="email" name="Email" required autocomplete="off" />
+      </label>
+
+      <label for="Mensaje" class="input-container">
+        <span class="title">Mensaje:</span>
+        <textarea
+          name="Mensaje"
+          id="Mensaje"
+          required
+          minlength="15"
+          maxlength="500"
+          autocomplete="off"></textarea>
+        <span class="characters-counter">0/500</span>
+      </label>
+      <button type="submit">
+        <BsFillSendFill size={"18px"} />
+        <span>Enviar</span>
+      </button>
+    </form>
+  </div>
+</section>
+
+<style>
+  section {
+    width: var(--max-page-width);
+    margin: auto;
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .form-container {
+    width: 550px;
+    height: auto;
+    border-radius: 20px;
+    background: linear-gradient(
+      45deg,
+      #515bd4,
+      #8134af,
+      #dd2a7b,
+      #f58529,
+      #515bd4
+    );
+    margin: 0 auto;
+    padding: 4px;
+  }
+
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: var(--background-projects-list);
+    padding: 30px;
+  }
+
+  .form-container form .client-data {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-secondary);
+  }
+
+  .input-container .title,
+  .input-container .error {
+    font-size: 0.9rem;
+  }
+
+  .input-container .characters-counter {
+    display: block;
+    text-align: right;
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+
+  input,
+  textarea {
+    background-color: transparent;
+    border-bottom: 2px solid var(--background-projects-list-hover);
+    width: 100%;
+    color: var(--text-primary);
+    transition: all ease-in-out 150ms;
+  }
+
+  input {
+    padding: 14px 18px;
+    font-size: 1.1rem;
+  }
+
+  textarea {
+    margin-top: 10px;
+    padding: 14px;
+    font-size: 0.95rem;
+    resize: none;
+    min-height: 50px;
+    max-height: 150px;
+    font-family: "DM-Sans";
+    field-sizing: content;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-bottom-color: var(--text-cian);
+  }
+
+  button {
+    cursor: pointer;
+    background-color: var(--background-projects-list-hover);
+    border: 1px solid transparent;
+    padding: 10px 16px;
+    color: var(--text-secondary);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    width: fit-content;
+    font-family: "DM-Sans";
+    transition: all ease-in-out 200ms;
+  }
+
+  button:hover {
+    border-color: var(--border-buttons);
+  }
+</style>
+
+<script>
+  import textareaChangeHandler from "../functions/textareaChangeHandler.js";
+  const form = document.querySelector("form");
+  const textarea = document.querySelector("form textarea");
+  const counter = document.querySelector(".characters-counter");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+
+  textarea.addEventListener("input", (e) => {
+    textareaChangeHandler(e, counter);
+  });
+</script>

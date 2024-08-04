@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Tu Farmacia Avanzada - E-Commerce",
+    "image": "/projects/tufarmaciavanzada.webp",
+    "url": "https://www.tufarmaciavanzada.com",
+    "description": "Sistema de comercio electronico desarrollado para la empresa 'Tu Farmacia Avanzada', modulos de carrito de compras, panel administrativo y autenticación con Google.",
+    "technologies": ["Next.js", "Tailwind CSS", "MySQL", "Cloudinary"]
+  },
+  {
+    "title": "Generador de voz con IA",
+    "image": "/projects/test.png",
+    "url": "",
+    "description": "Proyecto donde podrás generar voces a partir de texto utilizando inteligencia artificial, más de 10 modelos de voces para elegir y finalmente poder descargar un audio .MP3 con el resultado.",
+    "technologies": ["Astro", "Tailwind CSS"]
+  }
+]

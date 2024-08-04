@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  center: boolean;
+}
+
+const { title, center } = Astro.props;
+---
+
+<h2 style={center ? { textAlign: "center" } : {}}>
+  {title}
+</h2>
+<style>
+  h2 {
+    font-family: "Poppins-Medium";
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+  }
+</style>

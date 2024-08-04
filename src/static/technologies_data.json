@@ -1,0 +1,78 @@
+[
+  {
+    "label": "HTML 5",
+    "image": "/logos/html5.svg",
+    "color": "#f065294b"
+  },
+  {
+    "label": "CSS 3",
+    "image": "/logos/css.svg",
+    "color": "#2965f14b"
+  },
+  {
+    "label": "JavaScript",
+    "image": "/logos/javascript.svg",
+    "color": "#f0db4f4b"
+  },
+  {
+    "label": "Node.js",
+    "image": "/logos/nodejs.svg",
+    "color": "#3c873a4b"
+  },
+  {
+    "label": "React.js",
+    "image": "/logos/react.svg",
+    "color": "#7cc5d94b"
+  },
+  {
+    "label": "Astro.js",
+    "image": {
+      "dark": "/logos/astro_dark.svg",
+      "light": "/logos/astro_light.svg"
+    },
+    "color": "#ffffff4b"
+  },
+  {
+    "label": "Next.js",
+    "image": "/logos/nextjs.svg",
+    "color": "#ffffff4b"
+  },
+  {
+    "label": "Tailwind CSS",
+    "image": "/logos/tailwindcss.svg",
+    "color": "#06b6d44b"
+  },
+  {
+    "label": "Bootstrap",
+    "image": "/logos/bootstrap.svg",
+    "color": "#563d7c4b"
+  },
+  {
+    "label": "MySQL",
+    "image": "/logos/mysql.svg",
+    "color": "#00758f4b"
+  },
+  {
+    "label": "MongoDB",
+    "image": "/logos/mongodb.svg",
+    "color": "#4DB33D4b"
+  },
+  {
+    "label": "Git",
+    "image": "/logos/git.svg",
+    "color": "#F1502F4b"
+  },
+  {
+    "label": "Github",
+    "image": {
+      "dark": "/logos/github_dark.svg",
+      "light": "/logos/github_light.svg"
+    },
+    "color": "#ffffff4b"
+  },
+  {
+    "label": "Cloudinary",
+    "image": "/logos/cloudinary.svg",
+    "color": "#3448C54b"
+  }
+]

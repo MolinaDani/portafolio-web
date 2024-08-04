@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Programador web - Freelance",
+    "company": null,
+    "from": "Abril 2022",
+    "to": "Actualidad",
+    "description": "Como programador web freelance, he tenido la oportunidad de trabajar de manera independiente en diversos proyectos, brindando soluciones personalizadas a mis clientes. Mi enfoque se basa en comprender las necesidades específicas de cada proyecto y utilizar mi experiencia para desarrollar sitios web funcionales y atractivos."
+  },
+  {
+    "title": "Desarrollador web Full-Stack",
+    "company": "Linabyte",
+    "from": "Enero 2022",
+    "to": "Marzo 2024",
+    "description": "Durante más de dos años fui responsable del desarrollo y mantenimiento de páginas y aplicaciones web, desde su estructura y diseño en Frontend, hasta implementaciones de APIs, Bases de datos y servicios en Backend. Utilizando mayormente un stack compuesto por Next.js, Tailwind CSS y MySQL."
+  }
+]

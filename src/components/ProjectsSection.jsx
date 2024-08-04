@@ -2,25 +2,7 @@ import { IoIosLink } from "react-icons/io";
 import createIntersectionObserver from "../functions/createIntersectionObserver";
 import { useEffect, useState } from "react";
 import "../styles/ProjectsSection.css";
-
-const PROJECTS_DATA = [
-  {
-    title: "Tu Farmacia Avanzada - E-Commerce",
-    image: "/projects/tufarmaciavanzada.webp",
-    url: "https://www.tufarmaciavanzada.com",
-    description:
-      'Sistema de comercio electronico desarrollado para la empresa "Tu Farmacia Avanzada", modulos de carrito de compras, panel administrativo y autenticación con Google.',
-    tecnologies: ["Next.js", "Tailwind CSS", "MySQL", "Cloudinary"],
-  },
-  {
-    title: "Generador de voz con IA",
-    image: "/projects/test.png",
-    url: "",
-    description:
-      "Proyecto donde podrás generar voces a partir de texto utilizando inteligencia artificial, más de 10 modelos de voces para elegir y finalmente poder descargar un audio .MP3 con el resultado.",
-    tecnologies: ["Astro", "Tailwind CSS"],
-  },
-];
+import data from "../static/projects_data.json";
 
 export default function ProjectsSection() {
   const [sel, setSel] = useState(0);
@@ -59,7 +41,7 @@ export default function ProjectsSection() {
       <div className="projects-container">
         <div className="projects-list">
           <ul>
-            {PROJECTS_DATA.map((item, i) => (
+            {data.map((item, i) => (
               <li
                 key={i}
                 className={`${sel === i ? "selected" : ""}`}
@@ -74,20 +56,20 @@ export default function ProjectsSection() {
         <div className="image-container">
           <div
             className="project-image"
-            style={{ backgroundImage: `url(${PROJECTS_DATA[sel].image})` }}
+            style={{ backgroundImage: `url(${data[sel].image})` }}
           ></div>
         </div>
       </div>
       <div className="project-data">
-        <h3>{PROJECTS_DATA[sel].title}</h3>
-        <a href={PROJECTS_DATA[sel].url} target="_blank">
-          <span>Ir al sitio</span>
+        <h3>{data[sel].title}</h3>
+        <a href={data[sel].url} target="_blank">
+          <span>{data[sel].url}</span>
           <IoIosLink size={"15px"} className="url-icon" />
         </a>
-        <p>{PROJECTS_DATA[sel].description}</p>
+        <p>{data[sel].description}</p>
         <ul className="tecnologies">
-          {PROJECTS_DATA[sel].tecnologies.map((item, i) => (
-            <li key={i}>{item}</li>
+          {data[sel].technologies.map((item, i) => (
+            <li key={item}>{item}</li>
           ))}
         </ul>
       </div>
