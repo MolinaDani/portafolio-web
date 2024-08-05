@@ -1,4 +1,11 @@
 ---
+import "@fontsource-variable/dm-sans";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/800.css";
+
 import HeaderImage from "../components/HeaderImage.astro";
 import Header from "../components/Header.astro";
 import StarsLayer from "../components/StarsLayer.astro";
@@ -67,48 +74,12 @@ const { title } = Astro.props;
     }
   }
 
-  @font-face {
-    font-family: "DM-Sans";
-    src: url("/fonts/DM_Sans/DMSans.woff");
-    font-weight: 100 900;
-  }
-
-  @font-face {
-    font-family: "Poppins-Black";
-    src: url("/fonts/Poppins/Poppins-Black.woff");
-  }
-
-  @font-face {
-    font-family: "Poppins-ExtraBold";
-    src: url("/fonts/Poppins/Poppins-ExtraBold.woff");
-  }
-
-  @font-face {
-    font-family: "Poppins-Bold";
-    src: url("/fonts/Poppins/Poppins-Bold.woff");
-  }
-
-  @font-face {
-    font-family: "Poppins-SemiBold";
-    src: url("/fonts/Poppins/Poppins-SemiBold.woff");
-  }
-
-  @font-face {
-    font-family: "Poppins-Medium";
-    src: url("/fonts/Poppins/Poppins-Medium.woff");
-  }
-
-  @font-face {
-    font-family: "Poppins-Regular";
-    src: url("/fonts/Poppins/Poppins-Regular.woff");
-  }
-
   body {
     min-height: 100dvh;
     overflow-x: hidden;
     width: 100dvw;
     background-color: var(--background);
-    font-family: "DM-Sans";
+    font-family: "DM Sans Variable", sans-serif;
   }
 
   html {
@@ -118,13 +89,16 @@ const { title } = Astro.props;
   p {
     text-wrap: pretty;
     color: var(--text-secondary);
+    font-weight: 400;
   }
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4 {
     text-wrap: balance;
     color: var(--text-primary);
+    font-family: "Poppins", sans-serif;
   }
 
   img,
