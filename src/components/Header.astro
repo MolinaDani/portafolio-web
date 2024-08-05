@@ -120,6 +120,18 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
     filter: blur(5px);
     animation: move_background 4s ease-in-out infinite;
   }
+
+  @keyframes move_background {
+    0% {
+      background-position: 0px;
+    }
+    50% {
+      background-position: 100px;
+    }
+    100% {
+      background-position: 0px;
+    }
+  }
 </style>
 
 <script>

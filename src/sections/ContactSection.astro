@@ -1,5 +1,6 @@
 ---
-import TitleSections from "./TitleSections.astro";
+import "@/styles/SweetAlert.css";
+import TitleSections from "@/components/TitleSections.astro";
 import { BsFillSendFill } from "react-icons/bs";
 ---
 
@@ -55,8 +56,9 @@ import { BsFillSendFill } from "react-icons/bs";
         <span class="characters-counter">0/500</span>
       </label>
       <button type="submit">
-        <BsFillSendFill size={"18px"} />
-        <span>Enviar</span>
+        <span class="button-loading-icon"></span>
+        <BsFillSendFill className="button-icon" size={"18px"} />
+        <span class="button-text">Enviar</span>
       </button>
     </form>
   </div>
@@ -171,19 +173,27 @@ import { BsFillSendFill } from "react-icons/bs";
   button:hover {
     border-color: var(--border-buttons);
   }
+
+  button .button-loading-icon {
+    display: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-top-color: var(--text-secondary);
+    border-right-color: var(--text-secondary);
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 </style>
 
-<script>
-  import textareaChangeHandler from "../functions/textareaChangeHandler.js";
-  const form = document.querySelector("form");
-  const textarea = document.querySelector("form textarea");
-  const counter = document.querySelector(".characters-counter");
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-  });
-
-  textarea.addEventListener("input", (e) => {
-    textareaChangeHandler(e, counter);
-  });
-</script>
+<script src="@/scripts/contactForm.js"></script>

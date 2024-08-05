@@ -1,11 +1,11 @@
 ---
 import { FaCode } from "react-icons/fa6";
-import TitleSections from "./TitleSections.astro";
-import data from "../static/experience_data.json";
+import TitleSections from "@/components/TitleSections.astro";
+import data from "@/static/experience_data.json";
 ---
 
-<section>
-  <TitleSections title="Experiencia laboral:" />
+<section id="experience">
+  <TitleSections title="Experiencia laboral:" center={false} />
 
   <div class="experiences-container">
     <ul class="experiences-list">
@@ -34,7 +34,7 @@ import data from "../static/experience_data.json";
   section {
     width: var(--max-page-width);
     margin: auto;
-    margin-top: 30px;
+    padding-top: 60px;
     margin-bottom: 20px;
   }
 

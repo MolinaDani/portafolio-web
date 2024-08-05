@@ -1,0 +1,39 @@
+.swal-overlay {
+  background-color: transparent;
+}
+
+.swal-modal {
+  background-color: var(--background-alert);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgb(12, 12, 12);
+  font-family: "DM-Sans";
+}
+
+.swal-icon::before,
+.swal-icon::after,
+.swal-icon--success__hide-corners {
+  background-color: var(--background-alert);
+  border: 0;
+}
+
+.swal-title {
+  color: var(--text-primary);
+}
+
+.swal-text {
+  color: var(--text-secondary);
+}
+
+.swal-button {
+  background-color: transparent !important;
+  border: 2px solid var(--border-buttons);
+  transition: all ease-in-out 100ms;
+}
+
+.swal-button:hover,
+.swal-button:focus {
+  background-color: transparent !important;
+  outline: none;
+  box-shadow: 0 0 0 transparent;
+  border-color: var(--text-cian);
+}

@@ -1,8 +1,8 @@
 import { IoIosLink } from "react-icons/io";
-import createIntersectionObserver from "../functions/createIntersectionObserver";
+import createIntersectionObserver from "@/functions/createIntersectionObserver.js";
 import { useEffect, useState } from "react";
-import "../styles/ProjectsSection.css";
-import data from "../static/projects_data.json";
+import "@/styles/ProjectsSection.css";
+import data from "@/static/projects_data.json";
 
 export default function ProjectsSection() {
   const [sel, setSel] = useState(0);
