@@ -15,12 +15,18 @@
   footer {
     width: var(--max-page-width);
     margin: auto;
-    padding: 40px 0px;
+    padding: 40px 20px;
     display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
     align-items: center;
     justify-content: space-between;
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+  }
+
+  footer span {
+    text-align: center;
   }
 
   footer nav {
@@ -33,5 +39,14 @@
     text-decoration: none;
     color: var(--text-secondary);
     padding: 10px 16px;
+  }
+
+  @media (min-width: 768px) {
+    footer {
+      padding: 40px 0px;
+      flex-direction: row;
+      gap: 0px;
+      font-size: 0.95rem;
+    }
   }
 </style>

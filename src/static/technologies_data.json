@@ -26,10 +26,7 @@
   },
   {
     "label": "Astro.js",
-    "image": {
-      "dark": "/logos/astro_dark.svg",
-      "light": "/logos/astro_light.svg"
-    },
+    "image": "/logos/astro.svg",
     "color": "#ffffff4b"
   },
   {
@@ -64,10 +61,7 @@
   },
   {
     "label": "Github",
-    "image": {
-      "dark": "/logos/github_dark.svg",
-      "light": "/logos/github_light.svg"
-    },
+    "image": "/logos/github.svg",
     "color": "#ffffff4b"
   },
   {

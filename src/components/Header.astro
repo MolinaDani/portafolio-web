@@ -38,13 +38,15 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 
   header {
     width: 100%;
-    margin: 10px 0px;
+    margin-bottom: 10px;
     padding: 12px 0px;
     position: sticky;
     top: 0;
     left: 0;
     z-index: 10;
     transition: all ease-in-out 500ms;
+    background-color: var(--background-transparent);
+    backdrop-filter: blur(10px);
   }
 
   .container {
@@ -54,9 +56,10 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
     width: 100%;
     max-width: var(--max-page-width);
     margin: auto;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 500;
     color: var(--text-secondary);
+    padding: 0px 8px;
   }
 
   ul {
@@ -86,11 +89,15 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
     border-radius: 5px;
     transition: all ease-in-out 200ms;
     width: auto;
-    padding: 6px 14px;
+    padding: 6px 10px;
   }
 
   .social a:hover {
     border-color: var(--border-buttons);
+  }
+
+  .social a span {
+    display: none;
   }
 
   nav ul li a {
@@ -130,6 +137,34 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
     }
     100% {
       background-position: 0px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      font-size: 0.9rem;
+      padding: 0;
+    }
+
+    header {
+      margin: 10px 0px;
+      background-color: transparent;
+      backdrop-filter: blur(0px);
+    }
+
+    .social a span {
+      display: inline;
+    }
+
+    .social a {
+      padding: 6px 14px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      font-size: 1rem;
+      padding: 0;
     }
   }
 </style>

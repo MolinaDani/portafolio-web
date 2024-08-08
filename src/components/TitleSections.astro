@@ -13,8 +13,25 @@ const { title, center } = Astro.props;
 <style>
   h2 {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    line-height: 1.8rem;
     letter-spacing: 1px;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      padding: 0;
+      font-size: 1.8rem;
+      text-align: left;
+    }
+  }
+  @media (min-width: 1024px) {
+    h2 {
+      margin-bottom: 45px;
+      font-size: 2rem;
+    }
   }
 </style>
