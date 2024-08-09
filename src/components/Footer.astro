@@ -1,41 +1,115 @@
 ---
-
+import { BsWhatsapp } from "react-icons/bs";
+import { FaFacebook } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 ---
 
 <footer>
-  <span> &copy; 2024 Daniel Molina. Algunos derechos reservados </span>
+  <div>
+    <div class="share-container">
+      <span>Compartir en:</span>
+      <ul>
+        <li>
+          <a
+            href="https://api.whatsapp.com/send?text=Visita%20el%20portafolio%20web%20de%20Daniel%20Molina%20en%20https://portafolio-web-dusky.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"><BsWhatsapp size={"20px"} /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.facebook.com/sharer/sharer.php?u=https://portafolio-web-dusky.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"><FaFacebook size={"20px"} /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/intent/tweet?url=https://portafolio-web-dusky.vercel.app&text=Visita%20el%20portafolio%20web%20de%20Daniel%20Molina%20en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsTwitterX size={"20px"} /></a
+          >
+        </li>
+      </ul>
+    </div>
 
-  <nav>
-    <a href="#experience">Experiencia</a>
-    <a href="#technologies">Tecnologías</a>
-  </nav>
+    <nav>
+      <a href="#experience">Experiencia</a>
+      <a href="#technologies">Tecnologías</a>
+    </nav>
+  </div>
+
+  <span> &copy; 2024 Daniel Molina. Algunos derechos reservados </span>
 </footer>
 
 <style>
   footer {
     width: var(--max-page-width);
     margin: auto;
-    padding: 40px 20px;
+    padding: 40px 0px;
     display: flex;
-    flex-direction: column-reverse;
-    gap: 10px;
+    flex-direction: column;
+    gap: 18px;
     align-items: center;
-    justify-content: space-between;
     color: var(--text-secondary);
     font-size: 0.85rem;
+  }
+
+  footer div {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 6px;
+    width: 100%;
+  }
+
+  footer div .share-container ul {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+  }
+
+  footer .share-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  footer div .share-container ul {
+    list-style: none;
+  }
+
+  footer div .share-container ul li a {
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    transition: all ease-in-out 150ms;
+  }
+
+  footer div .share-container ul li a:hover {
+    border-color: var(--text-secondary);
   }
 
   footer span {
     text-align: center;
   }
 
-  footer nav {
+  footer div nav {
     display: flex;
     align-items: center;
     gap: 10px;
   }
 
-  footer nav a {
+  footer div nav a {
     text-decoration: none;
     color: var(--text-secondary);
     padding: 10px 16px;
@@ -43,10 +117,19 @@
 
   @media (min-width: 768px) {
     footer {
-      padding: 40px 0px;
-      flex-direction: row;
-      gap: 0px;
       font-size: 0.95rem;
+    }
+
+    footer div {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0px;
+    }
+
+    footer .share-container {
+      flex-direction: row;
+      gap: 10px;
+      justify-content: start;
     }
   }
 </style>
