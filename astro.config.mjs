@@ -5,9 +5,13 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react({
-    include: ["**/react/*"]
-  })],
+  integrations: [
+    react({
+      include: ["**/react/*"],
+    }),
+  ],
   output: "server",
-  adapter: vercel()
+  adapter: vercel({
+    webAnalytics: { enabled: true },
+  }),
 });
