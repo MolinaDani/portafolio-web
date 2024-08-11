@@ -11,6 +11,8 @@ import Header from "@/components/Header.astro";
 import StarsLayer from "@/components/StarsLayer.astro";
 import Footer from "@/components/Footer.astro";
 
+import SpeedInsights from "@vercel/speed-insights/astro";
+
 interface Props {
   title: string;
 }
@@ -75,6 +77,7 @@ const { title } = Astro.props;
     <Header />
     <slot />
     <Footer />
+    <SpeedInsights />
   </body>
 </html>
 <style is:global>
